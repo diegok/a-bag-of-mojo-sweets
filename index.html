@@ -562,14 +562,10 @@
                  : qq{"$module" not found!};
      next;
    }
-
-   # And extract files from the DATA section
-   say data_section($module, 'some_file.txt'); # TODO: move or tell we will see it later
  }
     </code></pre>
   </section>
   <section>
-    <h3>Mojo::Loader</h3>
     <pre><code data-noescape class="perl">
  package PerlMongers::Barcelona;
  use Mojo::Base -base;
@@ -691,7 +687,9 @@
 
  <%% Replaced with "<%", useful for generating templates %>
 
- % Perl code line, treated as "<% line =%>" (explained later)
+
+
+ % Perl code line, treated as "<% line =%>"
 
  %= Perl expression line, treated as "<%= line %>"
 
@@ -871,13 +869,6 @@
   </section>
 
   <section>
-    <h1>In the bag...</h1>
-  </section>
-  <section>
-    <h1>There is another bag!</h1>
-  </section>
-
-  <section>
     <h1>Mojo::Util</h1>
     <h3>Portable utility functions</h3>
   </section>
@@ -1053,7 +1044,7 @@ Mojo::IOLoop->start;
   </section>
 
   <section>
-    <h3>Mojo::IOLoop</h3>
+    <h3>Mojo::IOLoop::Promise</h3>
     <pre><code data-noescape class="perl">
  use Mojo::Base -strict, -signatures;
  use Mojo::Promise;
@@ -1076,7 +1067,7 @@ Mojo::IOLoop->start;
     </code></pre>
   </section>
   <section>
-    <h3>Mojo::IOLoop</h3>
+    <h3>Mojo::IOLoop::Promise</h3>
     <pre><code data-noescape class="perl">
  use Mojo::Base -strict, -signatures;
  use Mojo::Promise;
